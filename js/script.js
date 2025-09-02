@@ -5,8 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const submenus = document.querySelectorAll(".submenu");
   const submenuToggles = document.querySelectorAll(".submenu-toggle");
 
-  let menuStack = []; // historia wejść w menu
-
+  let menuStack = [];
   function hideAll() {
     submenus.forEach(sm => sm.style.display = "none");
     mainMenu.style.display = "none";
@@ -20,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     backIcon.style.display = menuStack.length > 0 ? "inline-block" : "none";
   }
 
-  // Klik w link do submenu
+  
   submenuToggles.forEach(link => {
     link.addEventListener("click", e => {
       e.preventDefault();
@@ -43,14 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("offcanvasMainTitle").addEventListener("click", () => {
     if (menuStack.length === 0) return;
 
-    const current = menuStack.pop(); // zamknij obecny poziom
+    const current = menuStack.pop(); 
     document.getElementById(current.id).style.display = "none";
 
     if (menuStack.length === 0) {
-      mainMenu.style.display = "block"; // wróć do głównego
+      mainMenu.style.display = "block"; 
       updateTitle("Menu");
     } else {
-      const prev = menuStack[menuStack.length - 1]; // pokaż poprzednie
+      const prev = menuStack[menuStack.length - 1]; 
       document.getElementById(prev.id).style.display = "block";
       updateTitle(prev.title);
     }
