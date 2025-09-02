@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  <section id="nav">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container d-flex justify-content-between align-items-center">
+
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="./img/LOGO.jpg" alt="Logo" class="logo">
+          <p class="nav-title">Unlimi<span class="nav-title-color">Tech</span></p>
+        </a>
+
+      
+        <div class="collapse navbar-collapse only-desktop" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- normal dropdown on desktop -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Damskie buty skórzane
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            <li class="nav-item"><a class="nav-link" href="#">Bony podarunkowe</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Nowości</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Bestseller</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-red" href="#">Wyprzedaż</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center">
+            <div class="search-bar me-3">
+              <input type="text" placeholder="Wyszukaj">
+              <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="navbar-icons">
+              <a href="#" class="icon"><i class="fa-solid fa-user"></i></a>
+              <a href="#" class="icon"><i class="fa-solid fa-heart"></i></a>
+              <a href="#" class="icon"><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile burger menu -->
+        <div class="only-mobile d-flex align-items-center ms-auto">
+          <div class="navbar-icons me-2">
+            <a href="#" class="icon"><i class="fa-solid fa-user"></i></a>
+            <a href="#" class="icon"><i class="fa-solid fa-heart"></i></a>
+            <a href="#" class="icon"><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
+
+          <!-- Offcanvas toggle -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+
+    
+    <div class="mobile-search-bar only-mobile px-3">
+      <div class="search-bar w-100">
+        <input type="text" placeholder="Wyszukaj">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+    </div>
+ 
+
+  
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+    <div class="offcanvas-header">
+      <!-- tytuł z ikonką do powrotu -->
+      <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasMainTitle">
+        <i id="backIcon" class="fa-solid fa-chevron-left me-2" style="display:none; cursor:pointer;"></i>
+        <span class="title-text">Menu</span>
+      </h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+  
+    <div class="offcanvas-body">
+      <!-- Główne menu -->
+      <ul class="navbar-nav mainmenu">
+        <li class="nav-item">
+          <a class="nav-link submenu-toggle" href="#" data-target="submenu-damskie">
+            Damskie buty skórzane <i class="fa-solid fa-chevron-right"></i>
+          </a>
+        </li>
+        <hr class="hrr">
+        <li class="nav-item"><a class="nav-link" href="#">Bony podarunkowe</a></li>
+        <hr class="hrr">
+        <li class="nav-item"><a class="nav-link" href="#">Nowości</a></li>
+        <hr class="hrr">
+        <li class="nav-item"><a class="nav-link" href="#">Bestseller</a></li>
+        <hr class="hrr">
+        <li class="nav-item"><a class="nav-link nav-link-blue fwb" href="#">% Wyprzedaż %</a></li>
+        <hr class="hr">
+        <li class="nav-link-li-end fwb">Zaloguj/Zarejestruj</li>
+        <hr class="hr">
+        <li class="nav-link-li-end fwb">Schowek</li>
+        <hr class="hr">
+        <li class="nav-link-li-end fwb">Koszyk</li>
+        <hr class="hr">
+        <div class="burger-menu-contact">
+          <p ><i class="fa-solid fa-phone burger-icon"></i> <a href="tel:+48123456789" class="phone phone-color">(+48) 000 000 000</a></p>
+          <p >
+            <a href="mailto:sklep@kontakt.com.pl" class="phone phone-color"><i class="fa-regular fa-address-book burger-icon"></i> sklep@kontakt.com.pl</a>
+          </p>
+          <hr class="burger-contact-hr">
+          <p >
+            <a  href="https://www.instagram.com/jj99flex" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a  href="https://www.tiktok.com/@jj99flex" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+          <a  href="https://www.facebook.com/jj99flex" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          </p>
+          
+        </div>
+      </ul>
+     <!-- Submenu Damskie -->
+<div class="submenu" id="submenu-damskie" style="display:none;">
+    <ul class="navbar-nav">
+      <li>
+        <a class="nav-link submenu-toggle" href="#" data-target="submenu-polbuty">
+          <i class="fa-solid fa-shoe-prints"></i>  Półbuty <i class="fa-solid fa-chevron-right"></i>
+        </a>
+      </li>
+      <hr class="hrr">
+      <li>
+        <a class="nav-link submenu-toggle" href="#" data-target="submenu-jazzowki">
+          <i class="fa-solid fa-shoe-prints"></i> Jazzówki 
+        </a>
+      </li>
+      <hr class="hrr">
+      <li>
+        <a class="nav-link submenu-toggle" href="#" data-target="submenu-czolenka">
+          <i class="fa-solid fa-shoe-prints"></i> Czółenka <i class="fa-solid fa-chevron-right"></i>
+        </a>
+      </li>
+      <hr class="hrr">
+      <li>
+        <a class="nav-link submenu-toggle" href="#" data-target="submenu-baleriny">
+          <i class="fa-solid fa-shoe-prints"></i> Baleriny <i class="fa-solid fa-chevron-right"></i>
+        </a>
+      </li>
+      <hr class="hrr">
+      <li>
+        <a class="nav-link submenu-toggle" href="#" data-target="submenu-sandaly">
+          <i class="fa-solid fa-shoe-prints"></i> Sandały <i class="fa-solid fa-chevron-right"></i>
+        </a>
+      </li>
+      <hr class="hrr">
+      <li>
+        <a class="nav-link submenu-toggle" href="#" data-target="submenu-klapki">
+          <i class="fa-solid fa-shoe-prints"></i> Klapki <i class="fa-solid fa-chevron-right"></i>
+        </a>
+      </li>
+      <hr class="hrr">
+      <li>
+        <a class="nav-link submenu-toggle" href="#" data-target="submenu-botki">
+          <i class="fa-solid fa-shoe-prints"></i> Botki <i class="fa-solid fa-chevron-right"></i>
+        </a>
+      </li>
+      <hr class="hrr">
+      <li>
+        <a class="nav-link submenu-toggle" href="#" data-target="submenu-kozaki">
+          <i class="fa-solid fa-shoe-prints"></i> Kozaki <i class="fa-solid fa-chevron-right"></i>
+        </a>
+      </li>
+      <hr class="hrr">
+      <li>
+        <a class="nav-link submenu-toggle" href="#" data-target="submenu-outlet">
+          <i class="fa-solid fa-shoe-prints"></i> Outlet
+        </a>
+      </li>
+      <hr class="hrr">
+      <p class="burger-show-all">Pokaż wszystkie <i class="fa-solid fa-chevron-right arrow"></i></p>
+    </ul>
+  </div>
+  
+  
+  <div class="submenu" id="submenu-polbuty" style="display:none;">
+    <ul class="navbar-nav">
+      <li><a class="nav-link" href="#">Eleganckie</a></li>
+      <hr class="hrr">
+      <li><a class="nav-link" href="#">Codzienne</a></li>
+    </ul>
+  </div>
+  
+
+  <div class="submenu" id="submenu-jazzowki" style="display:none;">
+    <ul class="navbar-nav">
+      <li><a class="nav-link" href="#">Eleganckie</a></li>
+      <hr class="hrr">
+      <li><a class="nav-link" href="#">Wyjściowe</a></li>
+    </ul>
+  </div>
+  
+
+  <div class="submenu" id="submenu-czolenka" style="display:none;">
+    <ul class="navbar-nav">
+      <li><a class="nav-link" href="#">Czułenka na słupku</a></li>
+      <hr class="hrr">
+      <li><a class="nav-link" href="#">Szpilki</a></li>
+      <hr class="hrr">
+      <li><a class="nav-link" href="#">Czułenka na koturnie</a></li>
+      <hr class="hrr">
+      <li><a class="nav-link" href="#">Czułenka bez pięty</a></li>
+      <hr class="hrr">
+      <li><a class="nav-link" href="#">Czułenka na niskim koturnie</a></li>
+    </ul>
+    <hr class="hrr">
+    <p class="burger-show-all">Pokaż wszystkie <i class="fa-solid fa-chevron-right arrow"></i></p>
+  </div>
+  
+ 
+  <div class="submenu" id="submenu-baleriny" style="display:none;">
+    <ul class="navbar-nav">
+      <li><a class="nav-link" href="#">Eleganckie</a></li>
+      <hr class="hrr">
+      <li><a class="nav-link" href="#">Wyjściowe</a></li>
+    </ul>
+  </div>
+  
+
+  <div class="submenu" id="submenu-sandaly" style="display:none;">
+    <ul class="navbar-nav">
+      <li><a class="nav-link" href="#">Eleganckie</a></li>
+      <hr class="hrr">
+      <li><a class="nav-link" href="#">Wyjściowe</a></li>
+    </ul>
+  </div>
+  
+  
+  <div class="submenu" id="submenu-klapki" style="display:none;">
+    <ul class="navbar-nav">
+      <li><a class="nav-link" href="#">Eleganckie</a></li>
+      <hr class="hrr">
+      <li><a class="nav-link" href="#">Wyjściowe</a></li>
+    </ul>
+  </div>
+  
+  
+  <div class="submenu" id="submenu-botki" style="display:none;">
+    <ul class="navbar-nav">
+      <li><a class="nav-link" href="#">Eleganckie</a></li>
+      <hr class="hrr">
+      <li><a class="nav-link" href="#">Wyjściowe</a></li>
+    </ul>
+  </div>
+  
+  
+  <div class="submenu" id="submenu-kozaki" style="display:none;">
+    <ul class="navbar-nav">
+      <li><a class="nav-link" href="#">Eleganckie</a></li>
+      <hr class="hrr">
+      <li><a class="nav-link" href="#">Wyjściowe</a></li>
+    </ul>
+  </div>
+  
+ 
+  <div class="submenu" id="submenu-outlet" style="display:none;">
+    <ul class="navbar-nav">
+      <li><a class="nav-link" href="#">Eleganckie</a></li>
+      <hr class="hrr">
+      <li><a class="nav-link" href="#">Wyjściowe</a></li>
+    </ul>
+  </div>
+        
+  </div>
+</section>
+</body>
+</html>
