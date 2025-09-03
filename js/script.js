@@ -64,17 +64,79 @@ $(document).ready(function() {
         attachBackIconEvent();
     });
 
+    
     $.get('./components/header.html', function(data) {
         $('#header-placeholder').html(data);
     });
 
+    $.get('./components/slide.html',function(data){
+        $('#slide-placeholder').html(data)
+
+        $(document).ready(function(){
+            $('.multiple-items').slick({
+              infinite: true,
+              slidesToShow: 4,
+              slidesToScroll: 1,
+              dots: true,
+              centerMode: false,
+              variableWidth: false,
+              
+              prevArrow: '<button type="button" class="slick-prev"><i class="fa-solid fa-arrow-left"></i></button>',
+              nextArrow: '<button type="button" class="slick-next"><i class="fa-solid fa-arrow-right"></i></button>',
+          
+              responsive: [
+                  {
+                    breakpoint: 1300,
+                    settings: {
+                      slidesToShow: 3
+                    }
+                  },
+                {
+                  breakpoint: 992,
+                  settings: {
+                    slidesToShow: 2
+                  }
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    dots:3,
+                  }
+                }
+              ]
+            });
+          });
+          $(document).ready(function(){
+            if (window.matchMedia("(min-width: 1300px)").matches) {
+              $('.slide img').hover(
+                function() {
+                  $(this).siblings('.slide-icon').stop().css({
+                    display: 'flex'
+                  }).animate({ top: "280px" }, 300); 
+                },
+                function() {
+                  $(this).siblings('.slide-icon').stop().animate({ top: "380px" }, 300, function() { 
+                    $(this).css({ display: 'none' });
+                  });
+                }
+              );
+            }
+          });
+          
+          
+          
+          
+          
+    })
     $.get('./components/main.html',function(data){
-        $('#main-placeholder').html(data)
+        $('#discount-placeholder').html(data)
     })
     $.get('./components/footer.html', function(data) {
         $('#footer-placeholder').html(data);
-
-      
+        
+        
         $('.about-us-title').click(function() {
             $(this).siblings('.about-us-p').slideToggle(); 
             $(this).find('.arrow').toggleClass('active');  
@@ -94,10 +156,15 @@ $(document).ready(function() {
         
     });
 });
-$(document).ready(function(){
-    $('.multiple-items').slick({
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 3
-    });
-  });
+
+
+
+
+  
+
+
+
+
+
+
+  
