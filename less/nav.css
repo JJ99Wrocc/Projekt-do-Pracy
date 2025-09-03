@@ -130,7 +130,6 @@ nav .search-bar button i {
 nav .forward-arrow {
   margin-right: 50px;
 }
-/* Media queries */
 @media (max-width: 1300px) {
   nav .search-bar {
     width: 150px;
@@ -200,16 +199,16 @@ nav .forward-arrow {
   .only-mobile {
     display: flex !important;
   }
-  nav .search-bar {
-    border-radius: 50px;
+  .search-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-radius: 50px;
     background-color: #fff;
     padding: 5px 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
-  nav .search-bar input {
+  .search-bar input {
     flex: 1;
     border: none;
     outline: none;
@@ -218,7 +217,7 @@ nav .forward-arrow {
     border-radius: 50px;
     font-size: 14px;
   }
-  nav .search-bar button {
+  .search-bar button {
     border: none;
     background-color: #dcd8d8;
     color: #fff;
@@ -230,88 +229,88 @@ nav .forward-arrow {
     justify-content: center;
     cursor: pointer;
   }
-  nav .nav-link {
+  .nav-link {
     margin-left: 10px;
   }
-  nav .nav-link i.fa-chevron-right,
-  nav .nav-link .arrow {
+  .nav-link i.fa-chevron-right,
+  .nav-link .arrow {
     float: right;
     margin-right: 10px;
   }
-  nav .nav-link i.fa-shoe-prints {
+  .nav-link i.fa-shoe-prints {
     margin-right: 2px;
     margin-left: 5px;
   }
-  nav .hr {
+  .hr {
     margin: 0 !important;
     align-items: center;
     justify-content: center !important;
     background-color: #d3d3d3;
   }
-  nav .navbar-nav.mainmenu li,
-  nav .hrr {
+  .navbar-nav.mainmenu li,
+  .hrr {
     padding: 0;
     margin: 0px 0;
   }
-  nav .nav-link-li-end {
+  .nav-link-li-end {
     background-color: #d3d3d3;
     padding: 10px !important;
     width: 100%;
   }
-  nav .offcanvas-body {
+  .offcanvas-body {
     padding: 0;
   }
-  nav .offcanvas-title {
+  .offcanvas-title {
     font-weight: 700;
   }
-  nav span.text-title {
+  span.text-title {
     margin-left: 50px !important;
   }
-  nav .offcanvas-header {
+  .offcanvas-header {
     background-color: #e6e5e5;
   }
-  nav .nav-link-blue {
+  .nav-link-blue {
     color: #3020df !important;
   }
-  nav .fwb {
+  .fwb {
     font-weight: 500;
   }
-  nav .upper-footer p:not(:last-child)::after {
+  .upper-footer p:not(:last-child)::after {
     display: none;
   }
-  nav .phone-color {
+  .phone-color {
     color: #000000;
   }
-  nav .burger-menu-contact {
+  .burger-menu-contact {
     text-align: center;
     margin-top: 100px;
     font-size: 15px;
   }
-  nav .burger-menu-contact p {
+  .burger-menu-contact p {
     margin: 10px 2.5px;
   }
-  nav .burger-menu-contact a {
+  .burger-menu-contact a {
     margin: 0 0.3rem;
     display: inline-block;
   }
-  nav .burger-icon {
+  .burger-icon {
     color: #2086df;
     margin-right: 5px;
   }
-  nav .burger-contact {
+  .burger-contact {
     margin-bottom: 20px;
   }
-  nav .burger-contact-hr {
+  .burger-contact-hr {
     width: 30%;
     margin: 0 auto;
   }
-  nav .burger-show-all {
+  .burger-show-all {
     margin-top: 10px;
     margin-left: 15px;
   }
-  nav .fa-facebook-f,
-  nav .fa-tiktok,
-  nav .fa-instagram {
+  .fa-facebook-f,
+  .fa-tiktok,
+  .fa-instagram {
     font-size: 20px;
   }
   nav .navbar-brand {
@@ -355,6 +354,15 @@ nav .forward-arrow {
   nav .navbar-icons .icon {
     margin: 0 2px;
   }
+  .w-100 {
+    margin: 0 5px;
+    height: 30px;
+  }
+  .search-bar button {
+    height: 22px;
+    width: 22px;
+    font-size: 10px;
+  }
   .offcanvas-title {
     font-size: 14px !important;
   }
@@ -365,34 +373,4 @@ nav .forward-arrow {
   .burger-menu-contact {
     font-size: 11px;
   }
-}
-.search-bar button {
-  border: none;
-  background-color: #dcd8d8;
-  color: #fff;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-.search-bar input {
-  flex: 1;
-  border: none;
-  outline: none;
-  background: transparent;
-  padding: 8px 12px;
-  border-radius: 50px;
-  font-size: 14px;
-}
-.search-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 50px;
-  background-color: #fff;
-  padding: 5px 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }

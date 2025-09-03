@@ -1,80 +1,76 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const offcanvasTitle = document.querySelector("#offcanvasMainTitle .title-text");
-  const backIcon = document.getElementById("backIcon");
-  const mainMenu = document.querySelector(".mainmenu");
-  const submenus = document.querySelectorAll(".submenu");
-  const submenuToggles = document.querySelectorAll(".submenu-toggle");
+$(document).ready(function() {
+  var menuStack = [];
+  var mainMenu, submenus, offcanvasTitle, backIcon;
 
-  let menuStack = [];
   function hideAll() {
-    submenus.forEach(sm => sm.style.display = "none");
-    mainMenu.style.display = "none";
+      if (submenus) submenus.hide();
+      if (mainMenu) mainMenu.hide();
   }
 
   function updateTitle(title) {
-    offcanvasTitle.textContent = title;
+      if (offcanvasTitle) offcanvasTitle.text(title);
   }
 
   function updateBackIcon() {
-    backIcon.style.display = menuStack.length > 0 ? "inline-block" : "none";
+      if (backIcon) backIcon.css("display", menuStack.length > 0 ? "inline-block" : "none");
   }
 
-  
-  submenuToggles.forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      const targetId = link.getAttribute("data-target");
+  function attachSubmenuEvents() {
+      $(".submenu-toggle").on("click", function(e) {
+          e.preventDefault();
+          var targetId = $(this).data("target");
+          hideAll();
+          $("#" + targetId).show();
 
-      hideAll();
-      document.getElementById(targetId).style.display = "block";
+          menuStack.push({
+              id: targetId,
+              title: $(this).text().trim()
+          });
 
-      menuStack.push({
-        id: targetId,
-        title: link.textContent.trim()
+          updateTitle($(this).text().trim());
+          updateBackIcon();
       });
+  }
 
-      updateTitle(link.textContent.trim());
-      updateBackIcon();
-    });
+  function attachBackIconEvent() {
+      $("#offcanvasMainTitle").on("click", function() {
+          if (menuStack.length === 0) return;
+
+          var current = menuStack.pop();
+          $("#" + current.id).hide();
+
+          if (menuStack.length === 0) {
+              if (mainMenu) mainMenu.show();
+              updateTitle("Menu");
+          } else {
+              var prev = menuStack[menuStack.length - 1];
+              $("#" + prev.id).show();
+              updateTitle(prev.title);
+          }
+
+          updateBackIcon();
+      });
+  }
+
+  // Load nav
+  $.get('./components/nav.html', function(data) {
+      $('#nav-placeholder').html(data);
+      mainMenu = $(".mainmenu");
+      submenus = $(".submenu");
+      offcanvasTitle = $("#offcanvasMainTitle .title-text");
+      backIcon = $("#backIcon");
+
+      attachSubmenuEvents();
+      attachBackIconEvent();
   });
 
-  // Klik w nagłówek (strzałka lub napis)
-  document.getElementById("offcanvasMainTitle").addEventListener("click", () => {
-    if (menuStack.length === 0) return;
-
-    const current = menuStack.pop(); 
-    document.getElementById(current.id).style.display = "none";
-
-    if (menuStack.length === 0) {
-      mainMenu.style.display = "block"; 
-      updateTitle("Menu");
-    } else {
-      const prev = menuStack[menuStack.length - 1]; 
-      document.getElementById(prev.id).style.display = "block";
-      updateTitle(prev.title);
-    }
-
-    updateBackIcon();
+  // Load header
+  $.get('./components/header.html', function(data) {
+      $('#header-placeholder').html(data);
   });
-});
 
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  // NAV
-  fetch('./components/nav.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('nav-placeholder').innerHTML = data;
-    });
-
-  // HEADER
-  fetch('./components/header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('header-placeholder').innerHTML = data;
-    });
+  // Load footer
+  $.get('./components/footer.html', function(data) {
+      $('#footer-placeholder').html(data);
+  });
 });

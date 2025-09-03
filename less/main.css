@@ -1,0 +1,42 @@
+.upper-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  gap: 2rem;
+  background-color: #082cfa;
+}
+.upper-footer div {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.upper-footer p {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 10px;
+  margin: 0;
+  padding: 0 25px;
+  cursor: pointer;
+}
+.upper-footer p:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 50%;
+  background-color: white;
+}
+.upper-footer i {
+  margin-right: 15px;
+  font-size: 12px;
+  gap: 10px !important;
+}
+.upper-footer .phone {
+  text-decoration: none;
+  color: white;
+}

@@ -1,0 +1,58 @@
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #f8f8f8;
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 20px 0 0;
+  
+      li {
+        margin-bottom: 8px;
+      }
+  
+      // tytuł zawsze widoczny
+      &:first-child {
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  
+    .delivery-and-payment,
+    .social-media {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+  
+    // MOBILNE - max-width 991px
+    @media (max-width: 991px) {
+      flex-direction: column;
+  
+      ul {
+        margin: 0 0 10px 0;
+        
+        // ukryj wszystkie li poza pierwszym (tytułem)
+        li:not(:first-child) {
+          display: none;
+        }
+  
+        // gdy UL ma klasę active - pokaż wszystkie elementy
+        &.active li {
+          display: block;
+        }
+      }
+  
+      .delivery-and-payment,
+      .social-media {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+      }
+    }
+  }
+  
