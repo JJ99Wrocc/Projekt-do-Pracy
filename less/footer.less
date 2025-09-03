@@ -1,58 +1,125 @@
 .footer-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  padding: 40px;
+  border-radius: 16px;
+  margin: 50px 0;
+  width: 1000%;
+  .hr-footer-mobile{
+    display: none;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 35px;
+    min-width: 150px;
+    font-size: 14px;
+    flex: 1;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 20px;
-    background-color: #f8f8f8;
-  
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 20px 0 0;
-  
-      li {
-        margin-bottom: 8px;
+    flex-direction: column;
+    .arrow {
+      display: none;      
+        float: right;
+        transition: transform 0.3s;
       }
-  
-      // tytuł zawsze widoczny
+      .arrow.active {
+        transform: rotate(180deg);
+      }
+      .about-us-p,.info-p,.ur-account-p,.customer-service-p,.contact-us-p {
+       display: block;
+      }
+    .contact-us-last{
+      margin-left: 10px;
+    }
+    .info-p,.ur-account-p,.customer-service-p,.contact-us-p{
+      font-size: 12px;
+    }
+    li {
+      .fa-solid, .fas,.fa-regular, .far{
+        color: #007bff;
+      margin-right: 5px;}
       &:first-child {
         font-weight: bold;
-        cursor: pointer;
+        margin-bottom: 10px;
       }
-    }
-  
-    .delivery-and-payment,
-    .social-media {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 20px;
-    }
-  
-    // MOBILNE - max-width 991px
-    @media (max-width: 991px) {
-      flex-direction: column;
-  
-      ul {
-        margin: 0 0 10px 0;
-        
-        // ukryj wszystkie li poza pierwszym (tytułem)
-        li:not(:first-child) {
-          display: none;
-        }
-  
-        // gdy UL ma klasę active - pokaż wszystkie elementy
-        &.active li {
-          display: block;
-        }
+    
+      &:not(:first-child) {
+        margin-bottom: 5px;
       }
-  
-      .delivery-and-payment,
-      .social-media {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 10px;
+
+      a {
+        text-decoration: none;
+        color: #333;
+
+        &:hover {
+          color: #007bff;
+        }
       }
     }
   }
-  
+
+  .footer-bottom {
+    width: 100%;        
+    margin-top: 10px;   
+    display: flex;      
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+      .delivery-and-payment-title,.social-media-title{font-weight: bold;}
+
+      .fa-cc-paypal,.fa-tiktok,.fa-facebook-f,.fa-instagram{
+        font-size: 25px;
+        margin-top: -5px;
+              }
+       .ml{
+        margin-left: 15px;
+       }       
+      .social-media{
+        margin-right: 70px;
+      }
+ 
+    }
+
+
+  }
+@media(max-width:992px){
+ .footer-box{
+  display: flex;
+  flex-direction: column !important; /* układa elementy jeden pod drugim */
+  gap: 10px; 
+  .hr-footer-mobile{
+    display: block;
+  }
+        ul{
+          flex: unset;
+          margin-top: 0;
+          .about-us-p,.info-p,.ur-account-p,.customer-service-p {
+          display: none;          
+                 }
+        
+        .about-us-title,.info-title,.ur-account-title,.customer-service-title {
+          user-select: none;
+          cursor: pointer;
+        }
+        
+        .arrow {
+          display: inline-block;
+        }
+        }
+ }
+ .footer-bottom {
+  display: flex;
+  flex: unset; flex-direction: column;
+   margin-top: 20px;
+
+.delivery-and-payment{
+  .fa-cc-paypal{margin-left: 0px;padding: 0;}
+}
+  .social-media {
+    flex-direction: row;
+    gap: 10px;}}
+   
+}
