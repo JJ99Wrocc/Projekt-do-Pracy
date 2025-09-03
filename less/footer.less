@@ -6,11 +6,17 @@
   background-color: #f5f5f5;
   padding: 40px;
   border-radius: 16px;
-  margin: 50px 0;
+  margin: 50px auto;
   width: 1000%;
-  .hr-footer-mobile{
+
+  h5 {
+    margin-bottom: 10px;
+  }
+
+  .hr-footer-mobile {
     display: none;
   }
+
   ul {
     list-style: none;
     padding: 0;
@@ -20,32 +26,45 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+
     .arrow {
-      display: none;      
-        float: right;
-        transition: transform 0.3s;
-      }
-      .arrow.active {
+      display: none;
+      float: right;
+      transition: transform 0.3s;
+
+      &.active {
         transform: rotate(180deg);
       }
-      .about-us-p,.info-p,.ur-account-p,.customer-service-p,.contact-us-p {
-       display: block;
-      }
-    .contact-us-last{
+    }
+
+    .about-us-p,
+    .info-p,
+    .ur-account-p,
+    .customer-service-p,
+    .contact-us-p {
+      display: block;
+    }
+
+    .contact-us-last {
       margin-left: 10px;
     }
-    .info-p,.ur-account-p,.customer-service-p,.contact-us-p{
+
+    .info-p,
+    .ur-account-p,
+    .customer-service-p,
+    .contact-us-p {
       font-size: 12px;
     }
+
     li {
-      .fa-solid, .fas,.fa-regular, .far{
+      .fa-solid,
+      .fas,
+      .fa-regular,
+      .far {
         color: #007bff;
-      margin-right: 5px;}
-      &:first-child {
-        font-weight: bold;
-        margin-bottom: 10px;
+        margin-right: 5px;
       }
-    
+
       &:not(:first-child) {
         margin-bottom: 5px;
       }
@@ -62,64 +81,105 @@
   }
 
   .footer-bottom {
-    width: 100%;        
-    margin-top: 10px;   
-    display: flex;      
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-      .delivery-and-payment-title,.social-media-title{font-weight: bold;}
 
-      .fa-cc-paypal,.fa-tiktok,.fa-facebook-f,.fa-instagram{
-        font-size: 25px;
-        margin-top: -5px;
-              }
-       .ml{
-        margin-left: 15px;
-       }       
-      .social-media{
-        margin-right: 70px;
-      }
- 
+    .fa-cc-paypal,
+    .fa-tiktok,
+    .fa-facebook-f,
+    .fa-instagram {
+      font-size: 25px;
+      margin-top: -5px;
     }
 
+    .ml {
+      margin-left: 15px;
+    }
 
+    .social-media {
+      margin-right: 70px;
+    }
   }
-@media(max-width:992px){
- .footer-box{
-  display: flex;
-  flex-direction: column !important; /* układa elementy jeden pod drugim */
-  gap: 10px; 
-  .hr-footer-mobile{
-    display: block;
-  }
-        ul{
-          flex: unset;
-          margin-top: 0;
-          .about-us-p,.info-p,.ur-account-p,.customer-service-p {
-          display: none;          
-                 }
-        
-        .about-us-title,.info-title,.ur-account-title,.customer-service-title {
-          user-select: none;
-          cursor: pointer;
-        }
-        
-        .arrow {
-          display: inline-block;
-        }
-        }
- }
- .footer-bottom {
-  display: flex;
-  flex: unset; flex-direction: column;
-   margin-top: 20px;
-
-.delivery-and-payment{
-  .fa-cc-paypal{margin-left: 0px;padding: 0;}
 }
-  .social-media {
-    flex-direction: row;
-    gap: 10px;}}
-   
+
+@media (max-width: 992px) {
+  .footer-box {
+    display: flex;
+    flex-direction: column !important;
+    gap: 10px;
+
+    .hr-footer-mobile {
+      display: block;
+    }
+
+    h5 {
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+
+    ul {
+      flex: unset;
+      margin-top: 0;
+
+      .about-us-p,
+      .info-p,
+      .ur-account-p,
+      .customer-service-p {
+        display: none;
+      }
+
+      .about-us-p,
+      .info-p,
+      .ur-account-p,
+      .customer-service-p,
+      .contact-us-p {
+        font-size: 11px;
+      }
+
+      .about-us-title,
+      .info-title,
+      .ur-account-title,
+      .customer-service-title {
+        user-select: none;
+        cursor: pointer;
+      }
+
+      .arrow {
+        display: inline-block;
+        margin-bottom: -15px;
+      }
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex: unset;
+      flex-direction: column;
+      margin-top: 11px;
+
+      .delivery-and-payment {
+        .fa-cc-paypal {
+          margin-left: 0px;
+          padding: 0;
+          margin-top: 3px;
+        }
+      }
+
+      .social-media {
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 3px;
+      }
+    }
+  }
+}
+
+@media (max-width: 578px) {
+  .footer-box {
+    width: 95%;
+    margin: 50px auto;
+  }
 }

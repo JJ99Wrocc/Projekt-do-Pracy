@@ -68,6 +68,9 @@ $(document).ready(function() {
         $('#header-placeholder').html(data);
     });
 
+    $.get('./components/main.html',function(data){
+        $('#main-placeholder').html(data)
+    })
     $.get('./components/footer.html', function(data) {
         $('#footer-placeholder').html(data);
 
@@ -91,3 +94,10 @@ $(document).ready(function() {
         
     });
 });
+$(document).ready(function(){
+    $('.multiple-items').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3
+    });
+  });

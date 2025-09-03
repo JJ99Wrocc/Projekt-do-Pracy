@@ -6,8 +6,11 @@
   background-color: #f5f5f5;
   padding: 40px;
   border-radius: 16px;
-  margin: 50px 0;
+  margin: 50px auto;
   width: 1000%;
+}
+.footer-box h5 {
+  margin-bottom: 10px;
 }
 .footer-box .hr-footer-mobile {
   display: none;
@@ -53,10 +56,6 @@
   color: #007bff;
   margin-right: 5px;
 }
-.footer-box ul li:first-child {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
 .footer-box ul li:not(:first-child) {
   margin-bottom: 5px;
 }
@@ -75,10 +74,6 @@
   align-items: flex-start;
   flex-wrap: wrap;
 }
-.footer-box .footer-bottom .delivery-and-payment-title,
-.footer-box .footer-bottom .social-media-title {
-  font-weight: bold;
-}
 .footer-box .footer-bottom .fa-cc-paypal,
 .footer-box .footer-bottom .fa-tiktok,
 .footer-box .footer-bottom .fa-facebook-f,
@@ -96,11 +91,14 @@
   .footer-box {
     display: flex;
     flex-direction: column !important;
-    /* układa elementy jeden pod drugim */
     gap: 10px;
   }
   .footer-box .hr-footer-mobile {
     display: block;
+  }
+  .footer-box h5 {
+    margin-bottom: 5px;
+    font-size: 12px;
   }
   .footer-box ul {
     flex: unset;
@@ -112,6 +110,13 @@
   .footer-box ul .customer-service-p {
     display: none;
   }
+  .footer-box ul .about-us-p,
+  .footer-box ul .info-p,
+  .footer-box ul .ur-account-p,
+  .footer-box ul .customer-service-p,
+  .footer-box ul .contact-us-p {
+    font-size: 11px;
+  }
   .footer-box ul .about-us-title,
   .footer-box ul .info-title,
   .footer-box ul .ur-account-title,
@@ -121,19 +126,28 @@
   }
   .footer-box ul .arrow {
     display: inline-block;
+    margin-bottom: -15px;
   }
-  .footer-bottom {
+  .footer-box .footer-bottom {
     display: flex;
     flex: unset;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 11px;
   }
-  .footer-bottom .delivery-and-payment .fa-cc-paypal {
+  .footer-box .footer-bottom .delivery-and-payment .fa-cc-paypal {
     margin-left: 0px;
     padding: 0;
+    margin-top: 3px;
   }
-  .footer-bottom .social-media {
+  .footer-box .footer-bottom .social-media {
     flex-direction: row;
     gap: 10px;
+    margin-top: 3px;
+  }
+}
+@media (max-width: 578px) {
+  .footer-box {
+    width: 95%;
+    margin: 50px auto;
   }
 }

@@ -1,3 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  // background-color: red;
+}
+.upper-footer {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 30px;
+  gap: 2rem; 
+  background-color: #082cfa;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  p {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 10px;
+    margin: 0;
+    padding: 0 25px;
+    cursor: pointer;
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px; 
+      height: 50%; 
+      background-color: white;
+    }
+  }
+
+  i {
+    margin-right: 15px;
+    font-size: 12px;
+    gap: 10px !important;
+  }
+
+  .phone {
+    text-decoration: none;
+    color: white;
+  }
+}
 .con {
   background-color: #fff;
 }
@@ -27,7 +80,7 @@ nav {
     gap: 5px;
   }
   .nav-title {
-    margin-top: 13px;
+    margin-top: 7px;
   }
   .nav-title-color {
     color: #0895fa;

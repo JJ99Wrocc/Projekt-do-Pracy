@@ -1,48 +1,232 @@
-.upper-footer {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    height: 30px;
-    gap: 2rem; 
-    background-color: #082cfa;
-  
-    div {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-  
-    p {
-      position: relative;
-      display: flex;
-      align-items: center;
-      color: white;
-      font-size: 10px;
-      margin: 0;
-      padding: 0 25px;
-      cursor: pointer;
-  
-      &:not(:last-child)::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 1px; 
-        height: 50%; 
-        background-color: white;
+.discount-box {
+  position: relative;
+  height: 150px;
+  max-height: 220px;
+  width: 1000%;
+  margin-top: 80px;
+  background-color:  #1431eb;
+  border-radius: 16px;
+    .discount-text{
+      position: absolute;
+      left: 100px;top: 40px;
+      font-size: 11px; 
+      color: #ffffff;
+      .discount-main-p{
+        margin-bottom: 2px;
       }
-    }
-  
-    i {
-      margin-right: 15px;
-      font-size: 12px;
-      gap: 10px !important;
-    }
-  
-    .phone {
-      text-decoration: none;
-      color: white;
-    }
+      .discount-lower-p{
+        margin: 0;padding: 0;
+      }
+   } 
+  .discount-box-2 {
+    width: 300px;
+    margin: 0 auto;
+    text-align: left;
   }
   
+
+  .error-text {
+    display: inline-block;
+    background-color: antiquewhite;
+    font-size: 9px;
+    color: red;
+    margin: 0 0 6px 19px;
+    padding: 2px 6px;
+    border-radius: 3px; 
+  }
+  
+
+ .discount-bar-box{ 
+  position: absolute;
+  top: 20px;right: 90px;
+  max-height: 50px;
+  .discount-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 30px;width: 220px;
+  background-color: white;
+  border-radius: 50px;
+  padding: 5px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0 5px;
+    font-size: 12px;
+    border-radius: 50px;
+
+    &::placeholder {
+      color: #7b7b7b;
+      font-size: 12px;
+      text-align:start;
+    }
+  }
+
+  button {
+    position: absolute;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    width: 28px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    i {
+      font-size: 12px;
+    }
+  }
+}
+
+
+.form-check { 
+  font-size: 9px;
+  color: #555;
+  display: flex;
+  align-items: center;
+
+  .form-check-input {
+    margin-right: 4px;
+    cursor: pointer;
+    accent-color: #ffffff;
+  }
+
+  .form-check-label {
+    cursor: pointer;
+    line-height: 1.4;
+    color: #ffffff;
+  }
+}}
+  
+
+@media(max-width:1200px){
+  .discount-text{
+    left: 30px;
+    .discount-main-p{
+      font-size: 21px;
+    }
+    .discount-lower-p{
+      font-size: 10px;
+    }
+  }
+  .discount-bar-box{
+    right:-15px;
+  }
+}
+@media(max-width:992px){
+  .discount-text{
+    left: 25px;
+    .discount-main-p{
+      font-size: 16px !important;
+    }
+    .discount-lower-p{
+      font-size: 8.5px !important;
+    }
+  }
+  .discount-bar-box{
+    right:-35px;
+   
+  }
+  input {
+       font-size: 9px !important;
+   
+    &::placeholder {
+       font-size: 9px;
+         }
+  }
+  .discount-bar{font-size: 1px !important;}
+  button {
+    right: 2px;
+    height: 17px;
+    width: 17px;
+       i {
+      font-size: 12px;
+    }
+  }
+}
+
+.form-check { 
+  font-size: 7px;
+
+  .form-check-input {
+    margin-right: 2px;
+  }
+
+ }
+ @media(max-width:768px){
+  .discount-text{
+    left: 15px;
+    .discount-main-p{
+      font-size: 12px !important;
+    }
+    .discount-lower-p{
+      font-size: 7px !important;
+    }
+  }
+  .discount-bar-box{
+    right:-55px;
+   
+  }
+  input {
+       font-size: 7px !important;
+   
+    &::placeholder {
+       font-size: 7px;
+         }
+  }
+
+  button {
+    right: 2px;
+    height: 14px;
+    width: 14px;
+       i {
+      font-size: 9px;
+    }
+  }
+ }
+
+
+ 
+}
+@media (max-width: 578px) {
+  .discount-box {
+    height: 250px !important;
+    width: 96%;
+    margin: 60px auto;
+
+    .discount-text {
+      position: relative !important;  
+      left: auto !important;
+      top: auto !important;
+      transform: none !important;
+      margin: 20px auto 0 !important; 
+      text-align: center !important;
+      max-width: 90% !important;
+
+      .discount-main-p {
+        font-size: 14px !important;
+      }
+      .discount-lower-p {
+        font-size: 10px !important;
+      }
+    }
+
+    .discount-bar-box {
+      position: absolute !important;
+      bottom: 60px !important;     
+      width: 220px;
+      top: auto !important;          
+      left: 50% !important;          
+      transform: translateX(-50%) !important;
+    }
+  }
+}
+
