@@ -2,9 +2,7 @@
   position: relative;
   height: 150px;
   max-height: 220px;
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 1000%;
   background-color: #1431eb;
   border-radius: 16px;
 }
@@ -182,6 +180,8 @@
 @media (max-width: 578px) {
   .discount-box {
     height: 250px !important;
+    width: 96%;
+    margin: 60px auto;
   }
   .discount-box .discount-text {
     position: relative !important;

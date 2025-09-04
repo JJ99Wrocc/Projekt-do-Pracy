@@ -63,6 +63,72 @@ body {
   margin-bottom: 15px;
   display: inline-block;
 }
+nav .hover:hover {
+  background-color: #0895fa;
+}
+nav .navbar-nav .dropdown-menu {
+  margin-top: 30px;
+}
+nav a.dropdown-item {
+  padding: 10px;
+}
+nav a.dropdown-item,
+nav .submenu-desktop {
+  background-color: #ededed;
+}
+nav .menu .hrrr {
+  padding: 0;
+  margin: 0;
+}
+nav .menu .li-submenu-desktop {
+  position: relative;
+}
+nav .menu .li-submenu-desktop .li-submenu-desktop:hover {
+  background-color: #082cfa;
+}
+nav .menu .li-submenu-desktop .submenu-desktop-img,
+nav .menu .li-submenu-desktop .submenu-desktop {
+  position: absolute;
+  border-radius: 8px;
+}
+nav .menu .li-submenu-desktop .submenu-desktop-li,
+nav .menu .li-submenu-desktop .submenu-desktop-li-2,
+nav .menu .li-submenu-desktop .submenu-desktop-img {
+  top: 30px;
+}
+nav .menu .li-submenu-desktop .submenu-desktop {
+  display: none;
+  top: -8.5px;
+  left: 160px;
+  height: 420px;
+  width: 700px;
+  list-style: none;
+}
+nav .menu .li-submenu-desktop .submenu-desktop .submenu-desktop-img {
+  right: 30px;
+  height: 360px;
+  width: 250px;
+}
+nav .menu .li-submenu-desktop .submenu-desktop .submenu-desktop-li,
+nav .menu .li-submenu-desktop .submenu-desktop .submenu-desktop-li-2 {
+  position: absolute;
+}
+nav .menu .li-submenu-desktop .submenu-desktop .submenu-desktop-li li,
+nav .menu .li-submenu-desktop .submenu-desktop .submenu-desktop-li-2 li {
+  margin-bottom: 3px;
+  font-size: 16px;
+}
+nav .menu .li-submenu-desktop .submenu-desktop .submenu-desktop-li {
+  left: 50px;
+}
+nav .menu .li-submenu-desktop .submenu-desktop .submenu-desktop-li-2 {
+  left: 250px;
+}
+nav .menu .li-submenu-desktop .submenu-desktop li a {
+  color: #000000;
+  font-size: 12px;
+  text-decoration: none;
+}
 nav .nav-link {
   font-size: 15px;
   gap: 5px;

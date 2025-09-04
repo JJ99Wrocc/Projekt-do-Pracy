@@ -59,7 +59,23 @@ $(document).ready(function() {
         submenus = $(".submenu");
         offcanvasTitle = $("#offcanvasMainTitle .title-text");
         backIcon = $("#backIcon");
-
+        $(document).ready(function() {
+          $(".li-submenu-desktop").click(function(e) {
+            e.stopPropagation();
+        
+         
+            $(".submenu-desktop").not($(this).find(".submenu-desktop")).hide();
+        
+           
+            $(this).find(".submenu-desktop").toggle();
+          });
+        
+        
+          $(document).click(function() {
+            $(".submenu-desktop").hide();
+          });
+        });
+        
         attachSubmenuEvents();
         attachBackIconEvent();
     });
@@ -123,7 +139,15 @@ $(document).ready(function() {
                   breakpoint: 768,
                   settings: {
                     arrows: false,
-                    slidesToShow: 1.5,
+                    slidesToShow: 2,
+                    dots:3,
+                  }
+                },
+                {
+                  breakpoint: 539,
+                  settings: {
+                    arrows: false,
+                    slidesToShow: 1,
                     dots:3,
                   }
                 }
@@ -154,6 +178,24 @@ $(document).ready(function() {
     })
     $.get('./components/discount.html',function(data){
         $('#discount-placeholder').html(data)
+    })
+    $.get('./components/photogrid.html',function(data){
+        $('#photogrid-placeholder').html(data)
+        if (window.innerWidth > 992) {
+          document.querySelectorAll('.gallery__item').forEach(item => {
+            const caption = item.querySelector('.gallery__caption');
+        
+            item.addEventListener('mouseenter', () => {
+              caption.style.display = 'block';
+            });
+        
+            item.addEventListener('mouseleave', () => {
+              caption.style.display = 'none';
+            });
+          });
+        }
+        
+        
     })
     $.get('./components/footer.html', function(data) {
         $('#footer-placeholder').html(data);

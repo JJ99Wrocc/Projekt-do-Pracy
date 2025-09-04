@@ -156,10 +156,14 @@
     right: 180px !important;
   }
 }
+@media (max-width: 992px) {
+  .promo-header {
+    margin-top: 100px;
+  }
+}
 @media (max-width: 768px) {
   #slider-section {
     width: 100%;
-    margin-left: 50px;
   }
   .slide-icon {
     right: 100px !important;
@@ -175,7 +179,10 @@
 }
 @media (max-width: 400px) {
   .slide-icon {
-    right: 105px !important;
+    right: 75px !important;
+  }
+  #slider-section {
+    margin-left: 15px;
   }
 }
 @media (max-width: 450px) {
