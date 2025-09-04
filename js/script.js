@@ -176,6 +176,20 @@ $(document).ready(function() {
           
           
     })
+    $.get('./components/shoppingCart.html',function(data){
+        $('#shoppingCart-placeholder').html(data)
+        
+        $(document).ready(function(){
+          $('.fa-bag-shopping').on('click',function(){
+            $('.cart').show()
+          })
+          $(document).ready(function(){
+            $('.cart__close').on('click',function(){
+              $('.cart').hide()
+            })
+          })
+        })
+    })
     $.get('./components/discount.html',function(data){
         $('#discount-placeholder').html(data)
     })
