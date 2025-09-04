@@ -14,11 +14,11 @@
       padding: 10px;
       
       .slick-slide {width: 10px !important;
-        margin: 0 10px; // odstęp między slajdami (lewo-prawo)
+        margin: 0 10px; 
       }
       
       .slick-list {
-        margin: 0 -10px; // żeby się nie rozjeżdżało na brzegu całego slidera
+        margin: 0 -10px; 
       }
       .on-slide-bestseler,.on-slide-promocja,.on-slide-nowosc {
         position: absolute;
@@ -146,45 +146,9 @@
     }
 
   
-    .slick-dots {
-      display: flex !important;
-      justify-content: center;
-      padding: 0;
-      list-style: none;
-  
-      button {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: black;
-        border: 0;
-        padding: 0;
-        cursor: pointer;
-        position: relative;
-        outline: none;
-        transition: transform 0.15s ease;
-        transform: scale(0.6);
-      }
-  
-      .slick-active button {
-        background: #fff;
-        border: 3px solid #009dff;
-        width: 26px;
-        height: 26px;
-        margin-top: -6px;
-        margin-left: -6px;
-        box-sizing: border-box;
-  
-        &::after {
-            content: "";
-            position: absolute;
-            inset: 4px;
-            background: #009dff;
-            border-radius: 50%;
-        }
-      }
-    }
+    
 }
+
 @media (max-width: 1299px) {
 .slide-icon {
 display: flex !important;
@@ -229,4 +193,17 @@ transform: none !important;
         right: 140px !important;
        
       }
-    }
+    }.promo-heading {
+        position: relative;
+        display: flex;                 
+        justify-content: flex-start;   
+        align-items: center;
+        font-size: 24px;
+        font-weight: 700;
+      
+        span {
+          padding: 0 10px;
+      
+      }
+      }
+      

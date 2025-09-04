@@ -7,7 +7,7 @@
 </head>
 <body>
     
-  <section id="nav">
+  <section id="nav"aria-label="Główne menu strony">
     <nav class="navbar navbar-expand-lg">
       <div class="container d-flex justify-content-between align-items-center">
 
@@ -22,10 +22,10 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
            
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
                    Damskie buty skórzane
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu"role="menu">
                   <li><a class="dropdown-item" href="#"> <i class="fa-solid fa-shoe-prints"></i>Półbuty</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#"> <i class="fa-solid fa-shoe-prints"></i>Jazzówki</a></li>
@@ -60,7 +60,7 @@
             <div class="navbar-icons">
               <a href="#" class="icon"><i class="fa-solid fa-user"></i></a>
               <a href="#" class="icon"><i class="fa-solid fa-heart"></i></a>
-              <a href="#" class="icon"><i class="fa-solid fa-bag-shopping"></i></a>
+              <a href="#" class="icon"><i class="fa-solid fa-bag-shopping"aria-label="Koszyk"></i></a>
             </div>
           </div>
         </div>
@@ -70,11 +70,11 @@
           <div class="navbar-icons me-2">
             <a href="#" class="icon"><i class="fa-solid fa-user"></i></a>
             <a href="#" class="icon"><i class="fa-solid fa-heart"></i></a>
-            <a href="#" class="icon"><i class="fa-solid fa-bag-shopping"></i></a>
+            <a href="#" class="icon"><i class="fa-solid fa-bag-shopping"aria-label="Koszyk"></i></a>
           </div>
 
          
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"aria-modal="true"aria-labelledby="offcanvasMainTitle">
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
@@ -92,14 +92,14 @@
  
 
   
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"aria-modal="true" aria-labelledby="offcanvasMainTitle">
     <div class="offcanvas-header">
     
-      <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasMainTitle">
-        <i id="backIcon" class="fa-solid fa-chevron-left me-2" style="display:none; cursor:pointer;"></i>
+      <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasMainTitle"aria-modal="true" aria-labelledby="offcanvasMainTitle">
+        <i id="backIcon" class="fa-solid fa-chevron-left me-2" style="display:none; cursor:pointer;"aria-label="Powrót"></i>
         <span class="title-text">Menu</span>
       </h5>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"aria-modal="true" aria-labelledby="offcanvasMainTitle"></button>
     </div>
   
     <div class="offcanvas-body">
@@ -132,9 +132,9 @@
           </p>
           <hr class="burger-contact-hr">
           <p >
-            <a  href="https://www.instagram.com/jj99flex" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a  href="https://www.tiktok.com/@jj99flex" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-          <a  href="https://www.facebook.com/jj99flex" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a  href="https://www.instagram.com/" target="_blank"aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a  href="https://www.facebook.com/" target="_blank"aria-label="tiktok"><i class="fa-brands fa-tiktok"></i></a>
+          <a  href="https://www.facebook.com/"  target="_blank"aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a>
           </p>
           
         </div>

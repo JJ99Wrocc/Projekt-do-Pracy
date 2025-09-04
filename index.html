@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="./less/header.css">
   <link rel="stylesheet" href="./less/footer.css">
   <link rel="stylesheet" href="./less/nav.css">
-  <link rel="stylesheet" href="./less/main.css">
+  <link rel="stylesheet" href="./less/discount.css">
 
   <link rel="stylesheet" href="./less/slide.css" />
   
@@ -21,21 +21,47 @@
 <body>
 
 
-  <section class="upper-footer">
+  <section class="upper-footer" role="contentinfo" aria-label="Informacje dodatkowe">
     <div>
-      <p><i class="fa-solid fa-phone"></i> <a href="tel:+48123456789" class="phone">(+48) 000 000 000</a></p>
-      <p class="only-desktop"><i class="fa-solid fa-pen-to-square"></i> Napisz do nas</p>
-      <p class="only-desktop"><i class="fa-solid fa-truck"></i> Darmowa dostawa</p>
-      <p class="only-desktop"><i class="fa-solid fa-circle-notch"></i> 30 dni na darmowy zwrot</p>
-    </div>
+      <p>
+        <i class="fa-solid fa-phone" aria-hidden="true"></i> 
+        <a href="tel:+48123456789" class="phone" aria-label="Zadzwoń pod numer telefonu">(+48) 000 000 000</a>
+      </p>
+  
+      <p class="only-desktop">
+        <a href="mailto:kontakt@firma.pl"class="phone">
+          <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i> 
+          Napisz do nas
+        </a>
+      </p>
+      
+      <p class="only-desktop">
+        <a href="#"class="phone">
+          <i class="fa-solid fa-truck" aria-hidden="true"></i> 
+          Darmowa dostawa
+        </a>
+      </p>
+      
+      <p class="only-desktop">
+        <a href="#"class="phone">
+          <i class="fa-solid fa-circle-notch" aria-hidden="true"></i> 
+          30 dni na darmowy zwrot
+        </a>
+      </p>
+      
   </section>
+  
 
 
-  <div id="nav-placeholder"></div>
+<section>  <div id="nav-placeholder"></div></section>
+<section>  
   <div id="header-placeholder"></div>
   <div id="slide-placeholder"></div>
-  <div id="main-placeholder"></div>
+  <div id="discount-placeholder"></div>
+</section>
+ <section>
   <div id="footer-placeholder"></div>
+ </section>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

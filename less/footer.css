@@ -3,11 +3,11 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
-  background-color: #f5f5f5;
+  background-color: #c7c2c2;
   padding: 40px;
   border-radius: 16px;
   margin: 50px auto;
-  width: 1000%;
+  max-width: 1150px;
 }
 .footer-box h5 {
   margin-bottom: 10px;
@@ -145,8 +145,8 @@
     margin-top: 3px;
   }
 }
-@media (max-width: 578px) {
-  .footer-box {
+@media (max-width: 992px) {
+  .comon-margin-sm {
     width: 95%;
     margin: 50px auto;
   }
