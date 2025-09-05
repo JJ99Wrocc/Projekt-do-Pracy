@@ -37,4 +37,4 @@ Projekt został stworzony w celu pokazania umiejętności w zakresie:
 ##  Jak uruchomić projekt
 - Projekt jest dostępny pod linkiem
 
-git clone https://github.com/JJ99Wrocc/Projekt-do-Pracy.git](https://jj99wrocc.github.io/Projekt-do-Pracy/)
+[git clone https://github.com/JJ99Wrocc/Projekt-do-Pracy.git](https://jj99wrocc.github.io/Projekt-do-Pracy/)](https://jj99wrocc.github.io/Projekt-do-Pracy/)
