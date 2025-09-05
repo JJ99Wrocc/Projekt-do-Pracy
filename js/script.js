@@ -193,6 +193,19 @@ $(document).ready(function() {
     $.get('./components/discount.html',function(data){
         $('#discount-placeholder').html(data)
     })
+    $.get('./components/search.html',function(data){
+        $('#search-placeholder').html(data)
+        $(document).ready(function(){
+                   $('.search-bar').on('click', function(){
+            $('.search-items').fadeIn(); 
+          });
+                  
+          $('.search-items__close').on('click', function(){
+            $('.search-items').fadeOut();
+          });
+        });
+        
+    })
     $.get('./components/photogrid.html',function(data){
         $('#photogrid-placeholder').html(data)
         if (window.innerWidth > 992) {
