@@ -2,7 +2,7 @@
 
 > Interaktywny projekt strony internetowej prezentujący strukturę UI koszyka zakupowego, galerii zdjęć oraz wyszukiwarki przedmiotów.  
 -Aktualna wersja działa, ale nie wszystkie funkcje zostały w pełni zoptymalizowane ani dokończone.
- Niektóre elementy wymagają dalszego rozwoju i dopracowania szczegółów takich jak optymalizacja kodu sprawdzenie dokładne metody DRY.
+ Niektóre elementy wymagają dalszego rozwoju i dopracowania szczegółów takich jak optymalizacja kodu sprawdzenie dokładne metody DRY, dodania działającej wyszukiwarki(...) .
 ---
 
 ## 🔹 Opis projektu
